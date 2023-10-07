@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// index.js
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+document.addEventListener("DOMContentLoaded", function () {
+  const dateDisplay = document.getElementById("date-display");
+  const addDayButton = document.getElementById("add-day-btn");
+  const addMonthButton = document.getElementById("add-month-btn");
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  // Initialize the date
+  const currentDate = new Date();
+  dateDisplay.textContent = currentDate.toDateString();
+
+  addDayButton.addEventListener("click", function () {
+    // Add 1 day
+    currentDate.setDate(currentDate.getDate() + 1);
+    dateDisplay.textContent = currentDate.toDateString();
+  });
+
+  addMonthButton.addEventListener("click", function () {
+    // Add 1 month
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    dateDisplay.textContent = currentDate.toDateString();
+  });
+});
