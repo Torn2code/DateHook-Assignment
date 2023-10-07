@@ -9,7 +9,7 @@ function MyComponent() {
   };
 
   const handleAddMonthClick = () => {
-    addMonths(1); //Will add one month to the date
+    addMonths(1); // Will add one month to the date
   };
 
   return (
