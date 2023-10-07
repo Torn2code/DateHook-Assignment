@@ -5,11 +5,11 @@ function MyComponent() {
   const { date, setDate, addDays, addMonths } = useDate(new Date());
 
   const handleAddDayClick = () => {
-    addDays(1); // Add one day to the date
+    addDays(1); // Will add one day to the date
   };
 
   const handleAddMonthClick = () => {
-    addMonths(1); // Add one month to the date
+    addMonths(1); //Will add one month to the date
   };
 
   return (
